@@ -9,9 +9,8 @@ import Foundation
 import FirebaseFirestore
 
 
-struct Todo: Identifiable, Codable{
-    @DocumentID var id: String? // Firestore will create this, so we use ?
+struct Todo: Identifiable, Codable {
+    var id: UUID
     var title: String
-    var isDone: Bool
-
+    var isCompleted: Bool
 }
